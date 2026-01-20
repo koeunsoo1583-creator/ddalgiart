@@ -252,12 +252,19 @@ button {
     position: relative;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    /* Push text to bottom for mobile */
     justify-content: center;
     padding-top: 70px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('hero_user_uploaded.jpg');
-    background-size: cover;
-    background-position: center 20%;
+    padding-bottom: 80px;
+    /* Add space at bottom */
+    background-image: url('hero_user_uploaded.jpg');
+    background-size: 100% auto;
+    /* Shrink to fit width */
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #333;
+    /* Dark background for area below image */
 }
 
 .hero__gradient {
@@ -274,11 +281,12 @@ button {
 .hero__container {
     position: relative;
     z-index: 2;
-    text-align: left;
+    text-align: center;
     display: flex;
     justify-content: center;
     /* Center the card on mobile */
-    align-items: center;
+    align-items: flex-end;
+    /* Align to bottom */
     height: 100%;
     width: 100%;
     max-width: 1200px;
@@ -290,19 +298,19 @@ button {
     max-width: 650px;
     width: 100%;
     margin: 0;
-    padding: 2rem;
-    /* Increased padding for card look */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Dark semi-transparent background */
-    backdrop-filter: blur(8px);
-    /* Glass effect */
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    /* Removed glass card styles */
+    background-color: transparent;
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    /* Strong shadow for readability */
 }
 
 .hero__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    /* Further reduced */
     line-height: 1.2;
     margin-bottom: var(--spacing-md);
     animation: fadeInUp 1s ease-out;
@@ -317,17 +325,18 @@ button {
 
 .hero__title-sub {
     display: block;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    /* Further reduced */
     background: linear-gradient(120deg, var(--color-primary), #FFDEE9);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .hero__description {
     font-size: 1.25rem;
-    color: var(--color-background-alt);
+    color: var(--color-white);
     margin-bottom: 2.5rem;
     max-width: 600px;
     line-height: 1.6;
@@ -757,19 +766,31 @@ button {
     }
 
     .hero {
-        background-position: 90% center;
+        background-size: cover;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('hero_user_uploaded.jpg');
+        background-position: center center;
+        align-items: center;
+        padding-bottom: 0;
+        background-color: transparent;
     }
 
     .hero__container {
+        align-items: center;
+        text-align: left;
         justify-content: flex-start;
     }
 
     .hero__content {
-        background-color: transparent;
-        backdrop-filter: none;
-        border: none;
-        box-shadow: none;
         padding: 0;
+        text-shadow: none;
+    }
+
+    .hero__title {
+        font-size: 3.5rem;
+    }
+
+    .hero__title-sub {
+        font-size: 4rem;
     }
 
     .nav__toggle {

@@ -784,16 +784,13 @@ button {
         height: auto;
         display: flex;
         flex-direction: row;
-        /* Default flex row */
         padding-top: 70px;
-        /* Reset padding */
         padding-bottom: 0;
         background-size: cover;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('hero_new.jpg');
-        background-position: center center !important;
-        /* Force center for desktop */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('hero_new.jpg');
+        background-position: 80% center !important;
+        /* Shift child to the right */
         align-items: center;
-        /* Center vertically on desktop */
         background-color: transparent;
         background-repeat: no-repeat;
     }
@@ -803,11 +800,14 @@ button {
         text-align: left;
         justify-content: flex-start;
         flex-direction: row;
+        width: 100%;
     }
 
     .hero__content {
         text-align: left;
         margin-bottom: 0;
+        max-width: 45%;
+        /* Restrict text to left side to avoid overlap */
     }
 
     .hero__title {
@@ -825,9 +825,7 @@ button {
         font-size: 4rem;
         text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         -webkit-text-fill-color: transparent;
-        /* Reset explicit white */
         background: linear-gradient(120deg, var(--color-primary), #FFDEE9);
-        /* Restore gradient */
         -webkit-background-clip: text;
         background-clip: text;
         margin-bottom: 0;
@@ -841,11 +839,11 @@ button {
 
     .hero__buttons {
         display: flex !important;
-        /* Force flex on desktop */
         flex-direction: row;
         width: auto;
         gap: 15px;
-        margin-top: 0;
+        margin-top: 4rem;
+        /* Move buttons down */
     }
 
     .hero__buttons .btn {

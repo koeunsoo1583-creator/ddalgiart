@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="과학+미술+놀이 중심 미술전문 어린이집, 딸기아트어린이집에서 아이들의 창의력과 상상력을 키워주세요.">
+    <meta name="keywords" content="어린이집, 미술, 과학, 놀이, 창의력, 딸기아트어린이집">
+    <meta property="og:title" content="딸기아트어린이집 - 창의력이 자라는 곳">
+    <meta property="og:description" content="과학+미술+놀이 중심 미술전문 어린이집">
+    <meta property="og:type" content="website">
+
+    <title>딸기아트어린이집 - 창의력이 자라는 곳</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <span class="logo-icon">🍓</span>
+                <span class="logo-text">딸기아트어린이집</span>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">홈</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">딸기아트소개</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">프로젝트</a></li>
+                    <li class="nav__item"><a href="#gallery" class="nav__link">포토갤러리</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">문의</a></li>
+                </ul>
+            </div>
+
+            <button class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero_user_uploaded.jpg'); background-size: cover; background-position: 90% center;">
+        <div class="hero__container container">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    <span class="hero__title-main" style="color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">창의력이
+                        자라는</span>
+                    <span class="hero__title-sub"
+                        style="background: none; -webkit-text-fill-color: #fff; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">딸기아트어린이집</span>
+                </h1>
+                <p class="hero__description"
+                    style="color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.5); font-weight: 500;">
+                    과학 · 미술 · 놀이가 하나 되는 특별한 교육 경험
+                </p>
+                <div class="hero__buttons">
+                    <a href="tel:0647521583" class="btn btn-primary">전화 상담하기</a>
+                    <a href="#projects" class="btn btn-secondary"
+                        style="background-color: rgba(255,255,255,0.2); color: #fff; border-color: #fff;">프로젝트 보기</a>
+                </div>
+            </div>
+        </div>
+        <!-- hero__gradient removed for image background -->
+    </section>
+
+    <!-- About Section (Intro) -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">딸기아트 소개</h2>
+                <p class="section__subtitle">아이들의 꿈을 그리는 행복한 배움터</p>
+            </div>
+            <div class="about__content" style="text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                <p style="margin-bottom: 20px; font-size: 1.1rem;">
+                    안녕하세요! <strong>딸기아트어린이집</strong>에 오신 것을 환영합니다.<br>
+                    우리는 아이들이 스스로 생각하고 표현하며 성장하는 <span style="color: var(--color-primary); font-weight: 700;">창의 융합
+                        교육</span>을 지향합니다.
+                </p>
+                <p style="color: var(--color-text-light);">
+                    따뜻한 햇살이 가득한 교실에서 과학의 신비, 미술의 즐거움, 놀이의 자유로움을 만끽하며<br>
+                    세상을 향한 호기심을 키워가는 우리 아이들의 모습을 기대해 주세요.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (Formerly Programs) -->
+    <section class="programs section" id="projects">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">이달의 프로젝트</h2>
+                <p class="section__subtitle">과학, 미술, 놀이가 통합된 주제별 탐구 활동</p>
+            </div>
+
+            <div class="programs__grid">
+                <!-- Art Program -->
+                <div class="program-card" data-aos>
+                    <div class="program-card__icon">
+                        <img src="art_icon_1768902947208.png" alt="미술 프로그램" loading="lazy">
+                    </div>
+                    <h3 class="program-card__title">미술 창작</h3>
+                    <p class="program-card__description">
+                        다양한 미술 재료와 기법을 경험하며 아이들만의 독창적인 표현력을 키워갑니다.
+                    </p>
+                    <ul class="program-card__features">
+                        <li>📐 기초 조형 활동</li>
+                        <li>🎨 감성 미술 교육</li>
+                        <li>🖌️ 다양한 재료 탐험</li>
+                    </ul>
+                </div>
+
+                <!-- Science Program -->
+                <div class="program-card" data-aos>
+                    <div class="program-card__icon">
+                        <img src="science_icon_1768903012617.png" alt="과학 프로그램" loading="lazy">
+                    </div>
+                    <h3 class="program-card__title">과학 탐구</h3>
+                    <p class="program-card__description">
+                        호기심을 자극하는 실험과 관찰을 통해 과학적 사고력과 탐구력을 길러줍니다.
+                    </p>
+                    <ul class="program-card__features">
+                        <li>🔬 재미있는 과학 실험</li>
+                        <li>🌱 자연 관찰 활동</li>
+                        <li>🧪 STEAM 통합 교육</li>
+                    </ul>
+                </div>
+
+                <!-- Play Program -->
+                <div class="program-card" data-aos>
+                    <div class="program-card__icon">
+                        <img src="play_icon_1768903080698.png" alt="놀이 프로그램" loading="lazy">
+                    </div>
+                    <h3 class="program-card__title">창의 놀이</h3>
+                    <p class="program-card__description">
+                        놀이 중심 교육을 통해 사회성, 문제 해결력, 신체 발달을 균형있게 키웁니다.
+                    </p>
+                    <ul class="program-card__features">
+                        <li>🧩 창의적 블록 놀이</li>
+                        <li>🎭 역할 놀이 활동</li>
+                        <li>⚽ 신체 발달 놀이</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section (Formerly Gallery) -->
+    <section class="gallery section" id="gallery">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">포토 갤러리</h2>
+                <p class="section__subtitle">아이들의 즐거운 활동 모습과 시설</p>
+            </div>
+
+            <div class="gallery__grid">
+                <div class="gallery__item" data-aos>
+                    <img src="gallery_art_class_1768903153198.png" alt="미술 교실" loading="lazy">
+                    <div class="gallery__overlay">
+                        <h4>미술 교실</h4>
+                        <p>창작의 즐거움이 가득한 공간</p>
+                    </div>
+                </div>
+                <div class="gallery__item" data-aos>
+                    <img src="gallery_play_area_1768903200529.png" alt="놀이 공간" loading="lazy">
+                    <div class="gallery__overlay">
+                        <h4>놀이 공간</h4>
+                        <p>안전하고 재미있는 놀이터</p>
+                    </div>
+                </div>
+                <div class="gallery__item" data-aos>
+                    <img src="gallery_science_corner_1768903233002.png" alt="과학 코너" loading="lazy">
+                    <div class="gallery__overlay">
+                        <h4>과학 탐구 코너</h4>
+                        <p>호기심을 키우는 발견의 공간</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy section" id="philosophy">
+        <div class="container">
+            <div class="philosophy__content">
+                <div class="philosophy__text" data-aos>
+                    <h2 class="section__title">교육 철학</h2>
+                    <div class="philosophy__description">
+                        <p class="philosophy__paragraph">
+                            <strong>딸기아트어린이집</strong>은 아이들의 무한한 가능성을 믿습니다.
+                        </p>
+                        <p class="philosophy__paragraph">
+                            과학적 탐구심, 예술적 감성, 그리고 놀이를 통한 사회성 발달이
+                            조화롭게 어우러질 때 아이들은 가장 행복하고 창의적으로 성장합니다.
+                        </p>
+                        <p class="philosophy__paragraph">
+                            우리는 단순히 지식을 전달하는 것이 아니라,
+                            <span class="highlight">스스로 생각하고, 표현하고, 협력하는 능력</span>을
+                            키워주는 교육을 실천합니다.
+                        </p>
+                    </div>
+                    <div class="philosophy__values">
+                        <div class="value-item">
+                            <span class="value-icon">💡</span>
+                            <span class="value-text">창의성</span>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">🤝</span>
+                            <span class="value-text">협동심</span>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">🌟</span>
+                            <span class="value-text">자율성</span>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">❤️</span>
+                            <span class="value-text">배려</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">문의 및 상담</h2>
+                <p class="section__subtitle">언제든 편하게 연락주세요</p>
+            </div>
+
+            <div class="contact__grid">
+                <div class="contact__info" data-aos>
+                    <div class="contact__item">
+                        <div class="contact__icon">📍</div>
+                        <div class="contact__details">
+                            <h4>주소</h4>
+                            <p>제주도 제주시 황새왓길 29-1</p>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <div class="contact__icon">📞</div>
+                        <div class="contact__details">
+                            <h4>전화번호</h4>
+                            <p>064-752-1583</p>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <div class="contact__icon">📠</div>
+                        <div class="contact__details">
+                            <h4>팩스</h4>
+                            <p>070-8900-1583</p>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <div class="contact__icon">📧</div>
+                        <div class="contact__details">
+                            <h4>이메일</h4>
+                            <p>hshgn@daum.net</p>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <div class="contact__icon">⏰</div>
+                        <div class="contact__details">
+                            <h4>운영시간</h4>
+                            <p>평일 07:30 - 19:30<br>주말 및 공휴일 휴무</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__cta" data-aos>
+                    <div class="cta-card">
+                        <h3>입학 상담 신청</h3>
+                        <p>아이의 밝은 미래를 함께 시작하세요</p>
+                        <a href="tel:0647521583" class="btn btn-primary btn-large">전화 상담하기</a>
+                        <a href="http://pf.kakao.com/_xhMMxan" target="_blank" class="btn btn-secondary btn-large">카카오톡
+                            문의</a>
+
+                        <div class="social-links-cta">
+                            <a href="https://www.instagram.com/ddalgi_art08?igsh=d2V0ZXphMGRhd3ph" class="social-icon"
+                                aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon" aria-label="Blog"><i class="fa-solid fa-b"></i></a>
+                            <a href="http://pf.kakao.com/_xhMMxan" class="social-icon" aria-label="KakaoTalk"
+                                target="_blank"><i class="fa-solid fa-comment"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <span class="logo-icon">🍓</span>
+                    <span class="logo-text">딸기아트어린이집</span>
+                </div>
+                <p class="footer__text">
+                    창의력이 자라는 곳, 꿈을 키우는 공간
+                </p>
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/ddalgi_art08?igsh=d2V0ZXphMGRhd3ph" class="social-icon-footer"
+                        aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon-footer" aria-label="Blog"><i class="fa-solid fa-b"></i></a>
+                    <a href="http://pf.kakao.com/_xhMMxan" class="social-icon-footer" aria-label="KakaoTalk"
+                        target="_blank"><i class="fa-solid fa-comment"></i></a>
+                </div>
+                <p class="footer__copyright">
+                    &copy; 2026 딸기아트어린이집. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

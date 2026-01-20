@@ -787,9 +787,9 @@ button {
         padding-top: 70px;
         padding-bottom: 0;
         background-size: cover;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('hero_new.jpg');
-        background-position: 80% center !important;
-        /* Shift child to the right */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('hero_new.jpg');
+        background-position: left center !important;
+        /* "Left" shows left side -> Pushes center subject RIGHT */
         align-items: center;
         background-color: transparent;
         background-repeat: no-repeat;
@@ -806,8 +806,9 @@ button {
     .hero__content {
         text-align: left;
         margin-bottom: 0;
-        max-width: 45%;
-        /* Restrict text to left side to avoid overlap */
+        max-width: 50%;
+        /* Left half only */
+        margin-right: auto;
     }
 
     .hero__title {
@@ -842,8 +843,8 @@ button {
         flex-direction: row;
         width: auto;
         gap: 15px;
-        margin-top: 4rem;
-        /* Move buttons down */
+        margin-top: 3rem;
+        /* Adjusted spacing */
     }
 
     .hero__buttons .btn {

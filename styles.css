@@ -275,7 +275,7 @@ button {
             rgba(30, 30, 20, 1) 100%
             /* Solid Dark Bottom */
         ),
-        url('hero_user_uploaded.jpg');
+        url('hero_new.jpg');
     background-size: cover, 100% auto;
     /* Gradient covers, Image fits width */
     background-repeat: no-repeat;
@@ -789,7 +789,7 @@ button {
         /* Reset padding */
         padding-bottom: 0;
         background-size: cover;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('hero_user_uploaded.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('hero_new.jpg');
         background-position: center center !important;
         /* Force center for desktop */
         align-items: center;

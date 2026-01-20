@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 /* =====================================
    CSS Custom Properties (Design Tokens)
    ===================================== */
@@ -16,7 +18,7 @@
     --color-gray-light: #F5F5F5;
 
     /* Typography */
-    --font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
     --font-size-base: 16px;
     --font-size-small: 14px;
     --font-size-h1: 2.5rem;
@@ -256,11 +258,11 @@ button {
     flex-direction: column;
     justify-content: flex-start;
     /* Start content immediately after padding */
-    padding-top: 45vh;
-    /* Adjusted space for image (approx 40-50% of screen) */
+    padding-top: 35vh;
+    /* Reduced space to pull text closer to image */
     padding-bottom: 4rem;
     /* Split Background: Image at Top (pushed down), Pastel Gradient */
-    background: url('hero_user_uploaded.jpg') center 70px / 110% auto no-repeat,
+    background: url('hero_user_uploaded.jpg') center 100px / 120% auto no-repeat,
         linear-gradient(180deg, #FFF9F2 0%, #FFE4E8 100%);
 }
 
@@ -302,7 +304,8 @@ button {
 
 .hero__title-main {
     display: block;
-    font-weight: 700;
+    font-weight: 600;
+    /* SemiBold for Pretendard */
     margin-bottom: 0.5rem;
     color: #4A4A4A;
     /* Dark Grey for softness */

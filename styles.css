@@ -254,13 +254,13 @@ button {
     /* Allow scrolling if content is long */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    /* Start content flow from bottom section */
-    padding-top: 55vh;
-    /* Push text down to clear the image (approx image height) */
+    justify-content: flex-start;
+    /* Start content immediately after padding */
+    padding-top: 45vh;
+    /* Adjusted space for image (approx 40-50% of screen) */
     padding-bottom: 4rem;
-    /* Split Background: Image at Top, Pastel Gradient covering the whole area */
-    background: url('hero_user_uploaded.jpg') top center / 100% auto no-repeat,
+    /* Split Background: Image at Top (pushed down), Pastel Gradient */
+    background: url('hero_user_uploaded.jpg') center 70px / 110% auto no-repeat,
         linear-gradient(180deg, #FFF9F2 0%, #FFE4E8 100%);
 }
 
@@ -765,7 +765,8 @@ button {
         padding-bottom: 0;
         background-size: cover;
         background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('hero_user_uploaded.jpg');
-        background-position: center center;
+        background-position: center center !important;
+        /* Force center for desktop */
         align-items: center;
         /* Center vertically on desktop */
         background-color: transparent;

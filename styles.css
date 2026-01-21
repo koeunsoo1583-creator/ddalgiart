@@ -248,17 +248,26 @@ button {
 }
 
 /* =====================================
-   Hero Section
+   Hero Section (Updated)
    ===================================== */
+.hero {
+    position: relative;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('hero_final.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 0 60px;
+    /* More top padding for header */
+}
 
 .hero__container {
     position: relative;
     z-index: 2;
-    text-align: center;
+    text-align: right;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -271,6 +280,9 @@ button {
     margin-bottom: 0.5rem;
     padding: 0;
     text-shadow: none;
+    background: none;
+    backdrop-filter: none;
+    border-radius: 0;
 }
 
 .hero__title {
@@ -281,52 +293,50 @@ button {
 .hero__title-main {
     display: block;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 0.3rem;
-    color: #4A4A4A;
-    /* Dark Grey for Bright Bg */
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     opacity: 1;
-    /* Full opacity */
     letter-spacing: 1px;
 }
 
 .hero__title-sub {
     display: block;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #333333;
-    /* Dark/Black */
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
     text-shadow: none;
-    /* Clean look */
     margin-bottom: 0.5rem;
-    background: none;
-    -webkit-text-fill-color: #333333;
 }
 
 .hero__description {
     font-size: 0.95rem;
-    color: #666666;
-    /* Medium Grey */
+    color: #333333;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
     margin-bottom: 1.5rem;
     line-height: 1.5;
+    font-weight: 600;
     animation: fadeInUp 1s ease-out 0.2s backwards;
 }
 
 .hero__buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Force 2x2 Grid */
     gap: 12px;
     width: 100%;
-    margin-top: 1rem;
-    justify-content: center;
+    margin-top: 22rem;
+    justify-content: flex-end;
     animation: fadeInUp 1s ease-out 0.4s backwards;
 }
 
 .hero__buttons .btn {
     width: 100%;
     padding: 14px 0;
-    /* Taller touch target */
     font-size: 1rem;
     border-radius: 12px;
     display: flex;
@@ -684,6 +694,25 @@ button {
     color: var(--color-primary);
 }
 
+/* SNS Links Styles */
+.social-links-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.social-icon {
+    font-size: 1.8rem;
+    color: var(--color-text-light);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
 /* =====================================
    Footer
    ===================================== */
@@ -713,6 +742,26 @@ button {
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
     margin-top: var(--spacing-md);
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.social-icon-footer {
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.social-icon-footer:hover {
+    opacity: 1;
+    color: var(--color-secondary);
+    transform: translateY(-2px);
 }
 
 /* =====================================
@@ -754,30 +803,35 @@ button {
         flex-direction: row;
         padding-top: 70px;
         padding-bottom: 0;
-        /* Desktop: Force Zoom & Shift */
-        background-size: 120% auto !important;
-        background-position: 10% center !important;
-        /* Shows left 10%, pushes center subject Right */
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero_new.jpg');
-        /* Dark overlay for White text */
+        /* Desktop: Adjust background */
+        background-size: cover;
+        background-position: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('hero_final.jpg');
         align-items: center;
-        background-color: transparent;
-        background-repeat: no-repeat;
     }
 
     .hero__container {
-        align-items: center;
-        text-align: left;
-        justify-content: flex-start;
-        flex-direction: row;
+        align-items: flex-end;
+        /* Align content to the right side flex-wise */
+        text-align: right;
+        justify-content: center;
+        /* Center vertically */
+        flex-direction: column;
+        /* Keep column to stack text and buttons */
         width: 100%;
+        padding-right: 5%;
+        /* Add some padding from the right edge */
     }
 
     .hero__content {
-        text-align: left;
+        text-align: right;
         margin-bottom: 0;
         max-width: 50%;
-        margin-right: auto;
+        margin-left: auto;
+        /* Push to right */
+        margin-right: 0;
+        background: none;
+        padding: 0;
     }
 
     .hero__title {
@@ -787,21 +841,19 @@ button {
 
     .hero__title-main {
         font-size: 1.8rem;
-        color: #FFFFFF;
-        /* Restore White text for Desktop */
+        color: #ffffff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         margin-bottom: 0.5rem;
     }
 
     .hero__title-sub {
         font-size: 4rem;
-        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        -webkit-text-fill-color: transparent;
-        background: linear-gradient(120deg, var(--color-primary), #FFDEE9);
+        background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
         -webkit-background-clip: text;
         background-clip: text;
-        margin-bottom: 0;
-        color: white;
-        /* Fallback */
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        text-shadow: none;
     }
 
     .hero__description {
@@ -813,10 +865,11 @@ button {
 
     .hero__buttons {
         display: flex !important;
+        grid-template-columns: none;
         flex-direction: row;
         width: auto;
         gap: 15px;
-        margin-top: 3rem;
+        margin-top: 25rem;
     }
 
     .hero__buttons .btn {
@@ -877,43 +930,4 @@ button {
         width: 140px;
         height: 140px;
     }
-}
-
-/* SNS Links Styles */
-.social-links-cta {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.social-icon {
-    font-size: 1.8rem;
-    color: var(--color-text-light);
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-    color: var(--color-primary);
-    transform: translateY(-3px);
-}
-
-.footer__social {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 1.5rem 0;
-}
-
-.social-icon-footer {
-    font-size: 1.5rem;
-    color: #fff;
-    opacity: 0.8;
-    transition: all 0.3s ease;
-}
-
-.social-icon-footer:hover {
-    opacity: 1;
-    color: var(--color-secondary);
-    transform: translateY(-2px);
 }

@@ -831,7 +831,8 @@ button {
         /* Push to right */
         margin-right: 0;
         background: none;
-        padding: 0;
+        padding-top: 15rem;
+        /* Pushed down as requested */
     }
 
     .hero__title {
